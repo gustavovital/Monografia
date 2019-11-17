@@ -43,10 +43,8 @@ Os códigos de análises gráficas, no entanto, não seguem essa logíca, visto 
 |analise_economica.R|18 de agosto de 2019|18 de agosto de 2019|
 |frequencias_economicas.R|7 de agosto de 2019|18 de agosto de 2019|
 |analise_economica_geral.R|18 de agosto de 2019|18 de agosto de 2019|
-|`graf_analise_economica_geral.R`|18 de agosto de 2019|18 de agosto de 2019|
 |analise_economica_periodos.R|18 de agosto de 2019|18 de agosto de 2019|
 |tibble_periodos.R|18 de agosto de 2019|18 de agosto de 2019|
-|`graf_analise_economica_periodos.R`|18 de agosto de 2019|19 de agosto de 2019|
 |frequencia_relativa.R|21 de agosto de 2019|21 de agosto de 2019|
 |analise_relativa_periodos.R|21 de agosto de 2019|21 de agosto de 2019|
 
