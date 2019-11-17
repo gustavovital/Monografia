@@ -47,6 +47,9 @@ Os códigos de análises gráficas, no entanto, não seguem essa logíca, visto 
 |tibble_periodos.R|18 de agosto de 2019|18 de agosto de 2019|
 |frequencia_relativa.R|21 de agosto de 2019|21 de agosto de 2019|
 |analise_relativa_periodos.R|21 de agosto de 2019|21 de agosto de 2019|
+|graficos.R|21 de outubro de 2019|21 de outubro de 2019|
+
+
 
 
 
