@@ -50,7 +50,7 @@ Os códigos de análises gráficas, no entanto, não seguem essa logíca, visto 
 |graficos.R|21 de outubro de 2019|21 de outubro de 2019|
 |kullback_liebler.R|21 de outubro de 2019|21 de outubro de 2019|
 |var.R|21 de outubro de 2019|21 de outubro de 2019|
-|shinyDashboard.R|21 de outubro de 2019|21 de outubro de 2019|
+|shinyDashboard.R|15 de novembro de 2019|15 de novembro de 2019|
 
 
 
