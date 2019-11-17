@@ -48,6 +48,8 @@ Os códigos de análises gráficas, no entanto, não seguem essa logíca, visto 
 |frequencia_relativa.R|21 de agosto de 2019|21 de agosto de 2019|
 |analise_relativa_periodos.R|21 de agosto de 2019|21 de agosto de 2019|
 |graficos.R|21 de outubro de 2019|21 de outubro de 2019|
+|kullback_liebler.R|21 de outubro de 2019|21 de outubro de 2019|
+|var.R|21 de outubro de 2019|21 de outubro de 2019|
 
 
 
