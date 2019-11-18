@@ -2,7 +2,7 @@
 
 Repositório criado para uma melhor organização dos códigos utilizados para uma análise de sentimento das atas (minutes) do banco central (BC) no período de 2003-2018, período Lula-Temer.
 
-Fundamentalmente os scripts listados aqui estão em .R e .sh (quando necessário a instalação do IRaMuTeQ). De forma geral, o sistema, e o R (versão) utilizado se apresenta da seguinte forma:
+Fundamentalmente os scripts listados aqui estão em .R. De forma geral, o sistema, e o R (versão) utilizado se apresenta da seguinte forma:
 
 ```
 platform       x86_64-pc-linux-gnu         
