@@ -45,7 +45,8 @@ graf.weibull <-
   
   scale_fill_manual(name = '',
                     values = c('Gamma' = '#e41a1c',
-                               'Weibull' = '#377eb8'),) +
+                               'Weibull' = '#377eb8'),
+  ) +
   labs(x = '', y = '') +
   theme_minimal() +
   theme(legend.position = 'bottom')
@@ -59,7 +60,8 @@ graf.log.normal <-
   
   scale_fill_manual(name = '',
                     values = c('Gamma' = '#e41a1c',
-                               'Log.normal' = '#4daf4a'),) +
+                               'Log.normal' = '#4daf4a'),
+  ) +
   labs(x = '', y = '') +
   theme_minimal() +
   theme(legend.position = 'bottom')
@@ -72,7 +74,8 @@ graf.gauss <-
   
   scale_fill_manual(name = '',
                     values = c('Gamma' = '#e41a1c',
-                               'Gauss' = '#984ea3'),) +
+                               'Gauss' = '#984ea3'),
+  ) +
   labs(x = '', y = '') +
   theme_minimal() +
   theme(legend.position = 'bottom')
@@ -86,7 +89,8 @@ graf.normal <-
   
   scale_fill_manual(name = '',
                     values = c('Gamma' = '#e41a1c',
-                               'Normal' = '#ff7f00'),) +
+                               'Normal' = '#ff7f00'),
+  ) +
   
   labs(x = '', y = '') +
   theme_minimal() +
@@ -137,6 +141,18 @@ data <- readRDS('Datas/ipca_pol_mon.rds')
 
 ggplot(data, aes(x = data)) +
   
+  geom_rect(
+    data = data,
+    mapping = aes(
+      xmin = as.Date('2010-12-08'),
+      xmax = as.Date('2016-07-20'),
+      ymin = -Inf,
+      ymax = Inf
+    ),
+    fill = '#ece2f0',
+    alpha = 0.2
+  ) +
+  
   geom_line(aes(y = monetary, colour = 'Monetary'), size = 1.5) +
   geom_line(aes(y = policy, colour = 'Policy'), size = 1.5) +
   geom_line(aes(y = ipca / 600, colour = 'IPCA'), size = 1.5) +
@@ -150,7 +166,19 @@ ggplot(data, aes(x = data)) +
     )
   ) +
   
-  scale_y_continuous(sec.axis = sec_axis( ~ . * 600)) +
+  scale_y_continuous(sec.axis = sec_axis(~ . * 600)) +
+  annotate("text",
+           x = as.Date('2007-12-08'),
+           y = 0.027,
+           label = "Meirelles") +
+  annotate("text",
+           x = as.Date('2013-12-08'),
+           y = 0.025,
+           label = "Tombini") +
+  annotate("text",
+           x = as.Date('2018-03-08'),
+           y = 0.029,
+           label = "Goldfajn") +
   labs(colour = '',
        x = '',
        y = '') +
@@ -162,6 +190,13 @@ rm(list = ls())
 #### wordcloud ####
 
 df <- readRDS('Datas/analise_economica.rds')
+
+goldfajn <-
+  readRDS('D:/Monografia/Datas/tibble.goldfajn.rds')[1:200,]
+
+word.geral <- df[1:200,]
+saveRDS(goldfajn,
+        'D:/Monografia/dashBoard/www/datas/wordsgoldfajn.rds')
 
 wordcloud(
   words = df$word,
@@ -264,7 +299,6 @@ grid.arrange(indice,
              ipca,
              ibcbr, ncol = 1, nrow = 3)
 
-rm(list = ls())
 
 #### google ####
 
@@ -315,12 +349,17 @@ laplace <- kl.laplace(Sigma)
 df <- data.frame(Sigma, laplace)
 
 ggplot(df, aes(x = Sigma)) +
-  geom_line(aes(y = laplace), colour = 'tomato4', size = 2.5) +
+  geom_line(aes(y = laplace),
+            colour = 'tomato4',
+            size = 2.5,
+            alpha = .5) +
   geom_line(aes(y = laplace),
             colour = 'tomato2',
             size = 1.5,
             alpha = .5) +
-  labs(y = '(I)', x = latex2exp::TeX('$\\sigma^2$')) +
-  theme_minimal()
+  labs(y = latex2exp::TeX('$\\textit{I(f,g)}$'),
+       x = latex2exp::TeX('$\\sigma^2$')) +
+  theme_minimal() +
+  theme(axis.title.x = element_text(size = 15),
+        axis.title.y = element_text(size = 13))
 
-rm(list = ls())
