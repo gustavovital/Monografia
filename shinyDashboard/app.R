@@ -12,35 +12,80 @@
 
 require(shiny)
 require(shinydashboard)
-require(shinydashboardPlus)
 require(wordcloud)
 require(ggplot2)
 
 # Bases de dados ====
 
+# WINDOWS ####
+
+# nuvemgeral <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/wordsgeral.rds')
+# nuvemgoldfajn <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/wordsgoldfajn.rds')
+# nuvemtombini <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/wordstombini.rds')
+# nuvemmeirelles <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/wordsmeirelles.rds')
+# 
+# klmeirelles <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/klmeirelles.rds')
+# kltombini <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/kltombini.rds')
+# klgoldfajn <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/klgoldfajn.rds')
+# 
+# freqmeirelles <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_meirelles.rds')
+# freqtombini <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_tombini.rds')
+# freqgoldfajn <-
+#   readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_goldfajn.rds')
+
+# LINUX ####
+
 nuvemgeral <-
-  readRDS('D:/Monografia/dashBoard/www/datas/wordsgeral.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordsgeral.rds'
+  )
 nuvemgoldfajn <-
-  readRDS('D:/Monografia/dashBoard/www/datas/wordsgoldfajn.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordsgoldfajn.rds'
+  )
 nuvemtombini <-
-  readRDS('D:/Monografia/dashBoard/www/datas/wordstombini.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordstombini.rds'
+  )
 nuvemmeirelles <-
-  readRDS('D:/Monografia/dashBoard/www/datas/wordsmeirelles.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordsmeirelles.rds'
+  )
 
 klmeirelles <-
-  readRDS('D:/Monografia/dashBoard/www/datas/klmeirelles.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/klmeirelles.rds'
+  )
 kltombini <-
-  readRDS('D:/Monografia/dashBoard/www/datas/kltombini.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/kltombini.rds'
+  )
 klgoldfajn <-
-  readRDS('D:/Monografia/dashBoard/www/datas/klgoldfajn.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/klgoldfajn.rds'
+  )
 
 freqmeirelles <-
-  readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_meirelles.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/analise_relativa_meirelles.rds'
+  )
 freqtombini <-
-  readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_tombini.rds')
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/analise_relativa_tombini.rds'
+  )
 freqgoldfajn <-
-  readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_goldfajn.rds')
-
+  readRDS(
+    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/analise_relativa_goldfajn.rds'
+  )
 
 # açoes  necessárias ====
 
@@ -462,7 +507,7 @@ ui <-
               ),
               withMathJax(),
               h2(
-                span('$$indice_i = \\frac{NP_i}{NP_i = NN_i}$$', style = 'color:green')
+                span('$$indice_i = \\frac{NP_i}{NP_i + NN_i}$$', style = 'color:green')
               ),
               br(),
               h2(
@@ -896,3 +941,4 @@ server <-
   }
 
 shinyApp(ui, server)
+
