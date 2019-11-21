@@ -308,7 +308,7 @@ ui <-
           )
         ),
         
-        # ANALISE DE CENTIMENTOS E BANCOS CENTRAIS ====
+        # ANALISE DE SENTIMENTOS E BANCOS CENTRAIS ====
         
         tabItem(
           tabName = 'analisebc',
