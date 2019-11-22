@@ -213,7 +213,7 @@ ui <-
           ),
           h3(
             'É sabido que dependendo da gestão de um Banco Central, seus interesses e focos podem variar. Seja pela gestão em si - se considerarmos uma abordagem mais ortodoxa ou heterodoxa
-                   frente a política monetária - ou mesmo de forma intrínceca ao governo vigente no pais. Ainda, seria interessante uma análise quantitativa perante as gestões vigentes: será que
+                   frente a política monetária - ou mesmo de forma intrínseca ao governo vigente no pais. Ainda, seria interessante uma análise quantitativa perante as gestões vigentes: será que
                    com uma mudança na presidência do Banco Central a abordagem em relação a política monetária realmente mudaria?'
           ),
           h3(
