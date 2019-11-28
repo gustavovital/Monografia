@@ -34,7 +34,7 @@ A pasta monografia contém o documento em LaTeX - main.tex, _childs_ e classe, b
 
 Para uma boa compreensão dos códigos, e afim de organizar o funcionamento dessa estrutura, lista-se em uma tabela a data de criação, modificação - em ordem necessária para o bom funcionamento dos _scripts_.
 
-Os códigos de análises gráficas, no entanto, não seguem essa logíca, visto que esses serão os últimos a serem rodados, bem como testes de distribuição (por Kullback-Liebler), ou análise **efetiva** de sentimentos.
+Os códigos de análises gráficas, no entanto, não seguem essa logíca, visto que esses serão os últimos a serem rodados, bem como testes de distribuição (Kullback-Liebler), ou análise **efetiva** de sentimentos.
 
 |**script**| **Data de criação** | **Última Data de Modificação** |
 |----------:|---------------------:|--------------------------------:|
