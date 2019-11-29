@@ -10,10 +10,10 @@
 
 # pacotes necessários ====
 
-require(shiny)
-require(shinydashboard)
-require(wordcloud)
-require(ggplot2)
+library(shiny)
+library(shinydashboard)
+library(wordcloud)
+library(ggplot2)
 
 # Bases de dados ====
 
