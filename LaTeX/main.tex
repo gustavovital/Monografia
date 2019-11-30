@@ -1,0 +1,103 @@
+%------------------------------------------------------------------------------
+% Exemplo de documento para auxiliar a padronização das monografias da 
+% Faculdade de Economia - UFF
+%------------------------------------------------------------------------------
+
+\documentclass[12pt, openright, chapter=TITLE]{economia} %---------------------
+% Estão disponíveis opções de impressão como frente e verso, papel A4, outras
+% linguagens e ets...
+%------------------------------------------------------------------------------ 
+
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{lscape}
+%\usepackage{pdflscape}
+\usepackage{threeparttable}
+\usepackage{scalefnt}
+\usepackage{amsfonts} 
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+%------------------------------------------------------------------------------
+% INFORMAÇÕES E DADOS PARA A CAPA
+%------------------------------------------------------------------------------
+
+\titulo{Aplicações de Técnicas de Análise de Sentimentos às Atas do Comitê de Política Monetária: comparação dos períodos de 2003 à 2018}
+\autor{Gustavo de Oliveira Vital}
+\data{2019} 
+\orientador{Prof. Dr. Jes\'us Alexei Luizar Obregon}
+%\coorientador{Prof. Dr$^{a}$. Danielle Carusi Machado}
+
+%------------------------------------------------------------------------------
+%	FOLHA DE ROSTO E PREAMBULO
+%------------------------------------------------------------------------------
+
+\preambulo{Monografia apresentada ao curso de Bacharelado em Ciências Econômicas da Universidade Federal Fluminense como requisito parcial para conclusão do curso.}
+
+%------------------------------------------------------------------------------
+% INÍCIO DO DOCUMENTO
+%------------------------------------------------------------------------------
+
+\makeindex
+
+\begin{document}
+
+\imprimircapa 						
+\imprimirfolhaderosto*	  					
+
+\include{aprovacao}	
+\clearpage
+
+\input{capitulos/agradecimentos.tex}
+
+\input{capitulos/resumo.tex}
+
+
+\figuras
+
+\tabelas
+
+\sumario
+
+
+% -----------------------------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% -----------------------------------------------------------------------------
+
+\textual
+
+
+
+
+\input{capitulos/introducao.tex}
+\input{capitulos/capitulo2.tex}
+\input{capitulos/capitulo3rev.tex}
+\input{capitulos/capitulo4.tex}
+\input{capitulos/capitulo5.tex}
+
+
+
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+
+\bibliography{referencias}
+
+%\begin{apendicesenv}
+%\input{capitulos/apendicea.tex}
+%\input{capitulos/apendiceb.tex}
+
+%\end{apendicesenv}
+
+
+\end{document}
