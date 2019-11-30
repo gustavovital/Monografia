@@ -1,0 +1,38 @@
+\chapter{Introdução}
+
+% o que é analise de sentimento
+% breve histórico da análise de sentimento
+% como é feita?
+% por que ela é feita? Destacar ṕotencialidades da metodologia
+
+% Quais são os objetivos gerais? Ex: ajudar a compreender tal fenômeno
+% Quais são os objetivos específicos? Ou seja, o que exatamente se pretende com o trabalho? São objetivos-meio para alcançar o objetivo geral. Ex: comprovar que a evasão aumentou nos últimos anos para contribuir na elucidação do fenômeno da evasão. Este ponto tem a ver com as conclusões. Se as conclusões alcançam esses objetivos, o trabalho foi bem sucedido.
+
+% Estrutura do trabalho
+% Quais são os capítulos?
+% O que será discutido em cada capítulo?
+% O que se pretende alcançar com cada capítulo?
+
+É sabido que a tomada de decisões em diversas áreas econômicas têm, por vezes, como referência boletins e resoluções de bancos centrais. Como todo documento textual, atas e boletins contém informações objetivas e subjetivas quantificáveis possibilitando uma relação com a atividade econômica; política econômica ou mesmo uma análise específica em relação à análise de conjuntura de um certo período - no que se refere as informações objetivas. É possível, através de modelagem econométrica, mapear posições de agentes econômicos, bem como trazer expectativas dos respectivos comportamentos.
+
+%É possível, desta forma, \textit{mapear} posições de agentes econômicos afim de modelar econometricamente para melhor entendermos as posições desses agentes, bem como suas expectativas.
+
+Naturalmente, pelas características das informações dos agentes, é esperado que o mapeamento destes fenômenos econômicos não siga o mesmo padrão diante diferentes momentos conjunturais.  
+
+Em geral, análise de sentimentos pode ser considerada uma técnica computacional de manipulação e análise de dados que consiste em extrair e classificar informações contidas em textos naturais. O objetivo é encontrar opiniões, expressões, e mensagens que um ou mais textos podem transmitir - dado um texto, classificá-lo como positivo ou negativo, por meio de identificações de padrões e características desse texto.   
+
+Ainda, é possível melhor entender a abordagem relativa a um texto dado um cenário econômico, social ou geo-político. Até então, pouco utilizada no âmbito econômico, essa técnica é comumente relacionada aos campos das ciências políticas e de marketing. Um dos principais motivos de não se trabalhar com análise de sentimentos em questões econômicas é não ser óbvio - a princípio - que textos podem ser analisados e classificados como dados quantitativos, o que é uma contradição frente ao aspecto de bancos centrais utilizarem ferramentas e técnicas estatísticas que permitem esse feito \cite{bholat2015text}.        
+
+Um outro fator a ser discutido é a possibilidade de realização dessa técnica. Como se trata, majoritariamente, de uma técnica computacional e comumente é relacionado ao campo de \textit{big data}, seria inviável a utilização dessa sem uma adequada capacidade de processamento e armazenamento de dados, o que explica um crescimento recente no uso da análise de sentimentos - visto que cada vez mais computadores são capazes de processar e armazenar informações.  
+
+A presente monografia visa estudar no contexto de análise de sentimentos as expressões das atas do Comitê de Política Monetária (COPOM) no período de 2003-2018, Lula-Temer. Dessa forma, a análise feita é referente aos três diferentes períodos de presidência do Banco Central: Henrique Meirelles; Alexandre Tombini; e Ilan Goldfajn. É verificada uma mudança nos padrões das distribuições relativas aos períodos das palavras que mais aparecem. Para a contestação das mudanças referentes as distribuições, utiliza-se a divergência de Kullback-Leibler (também conhecida como entropia relativa) \cite{kullback1951information}. %De forma geral, se a divergência de Kullback-Leibler for igual a zero, podemos esperar o mesmo comportamento entre as distribuições das palavras, enquanto uma entropia relativa igual a um indicaria que as distribuições das séries se comportariam de maneira diferente. É apresentado, além disto, os dicionários utilizados na análise de sentimentos deste trabalho, bem como suas metodologias de composição. 
+
+O segundo capítulo deste trabalho contém essencialmente uma explicação mais aprofundada sobre análise de sentimentos e \textit{text mining}, evidenciando a importância dessas duas técnicas como parte fundamental e específica do campo da ciência de dados, bem como suas aplicabilidades. Ainda, é feita uma revisão dos tipos e características das formas de realizar essa técnica, seja ela com o uso - ou não - de dicionários de \textit{stopwords}, ou algoritmos de \textit{machine learning}. Neste capítulo, discute-se, também, a abordagem da análise de sentimentos por bancos centrais e pesquisas com base em trabalhos empíricos já realizados.
+
+O terceiro caítulo se inicia com uma explicação das principais técnicas utilizadas nesta monografia. São elas: o \textit{web scraping} empregado, bem como o funcionamento de um algoritmo de \textit{web scraping}; tratamento dos dados e a metodologia utilizada para o tratamento dos mesmos; o dicionário de \textit{stopwords} utilizado e o porquê de utiliza-lo; e a metodologia utilizada em relação a análise de sentimentos em si. Além disso, é explicado o porquê da utilização da linguagem R na utilização desse trabalho, bem como os pacotes dessa linguagem contidos no projeto. %É explicado, também, o porquê das atas analisadas estarem em inglês (minutes). 
+
+O quarto capítulo, por sua vez, apresenta os resultados empíricos do trabalho. Entre esses podemos citar comparações entre as frequências de palavras; a ocorrência geral das palavras corrigidas pelos tamanhos das atas; comparações das principais palavras frentes aos momentos de conjunturas analisados; e a análise de sentimentos nas atas do COPOM.
+
+Finalizamos com o quinto capítulo, evidenciando as considerações finais do trabalho e as conclusões referentes ao que foi feito.
+
+%Por fim, estão conditas as seções de apêndice da monografia. Nos anexos são apresentadas as principais tabelas referentes aos dicionários (\textit{stopwords}, léxico); tabelas de frequência das palavras utilizadas por períodos; tabelas de correções de palavras, assim como a metodologia utilizada para cada correção em particular; tabelas das 400 palavras que mais aparecem numa análise geral (sem distinção de termos econômicos); gráficos de distribuição e histogramas das palavras de cunho econômico que mais aparecem; resultados dos testes estatísticos; e referências aos códigos utilizados nesta monografia por meio de um repositório online. 

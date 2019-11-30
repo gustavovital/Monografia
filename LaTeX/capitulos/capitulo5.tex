@@ -1,0 +1,19 @@
+\chapter{Considerações Finais}
+
+Nesta monografia apresentamos as técnicas de \textit{web scraping} conjuntamente com as ferramentas de análise de sentimentos aplicados à métodos quantitativos para melhor compreender as expressões das atas do COPOM.
+
+A partir da análise realizada foi possível encontrar semelhanças e diferenças quanto às expressões das atas em relação a diferentes períodos de gestão de política monetária do Banco Central do Brasil.
+
+Levando em consideração estatísticas descritivas e medidas estatísticas mais robustas, podemos considerar que houve -- de fato -- uma maior semelhança em relação às políticas monetárias do período PT (Meirelles e Tombini) do que do período PMDB (Goldfajn).
+
+Através de algorítimos e técnicas de \textit{web scraping} e \textit{text mining} foram feitos os \textit{downloads} das atas do COPOM, e o \textit{corpus} foi tratado mediante dicionários e algorítimos de \textit{stopwords}.
+
+Por meio de nuvens de palavras (\textit{wordclouds}) e tabelas descritivas, foram apresentados os termos mais utilizados em cada período, de 2003 à 2018 bem como a variação da divergência de Kullback-Liebler quando comparamos esses principais termos -- até finalmente chegarmos a conclusão de que para \textbf{todos} os períodos a divergência de K-L foi menor em relação a Meirelles-Goldfajn (qualquer que seja o período referência) do que para qualquer outro período analisado.
+
+Ainda, foi proposto um índice de otimismo, baseado em \citeonline{costa2016ensaios} para uma melhor compreensão de como as reuniões do Comitê de Política Monetária se comportavam frente às variações do cenário macroeconômico brasileiro. Dessa forma, foi possível apresentar períodos de otimismo e de pessimismo para as reuniões do COPOM de 2003 à 2018, de acordo com os termos mais utilizados nas atas das reuniões periódicas do BCB.
+
+Indo além, e com base na metodologia adotada por \citeonline{shapiro2019taking}, foi apresentado e estimado um VAR(2) bem como uma função de resposta ao impulso, apresentando uma relação de endogeneidade para o índice proposto, o Índice de Atividade Econômica do Banco Central e o IPCA acumulado em 12 meses. 
+
+A função de resposta ao impulso indicou que mediante um choque positivo no índice de otimismo, o Índice de Atividade Econômica do Banco Central sofreria uma variação positiva; bem como dado esse mesmo choque, o IPCA acumulado em 12 meses sofreria uma variação negativa -- assim, afirmando um sentido econômico.
+
+Dessa forma, foi possível concluir que quantificar dados textuais pode ser interessante no âmbito de entendermos como o Banco Central do Brasil se expressa, bem como compreender que essas expressões reafirmam uma tendência em relação à política monetária adotada em diferentes períodos -- seja quando essas reafirmam posições frente à variáveis macroeconômicas ou mesmo em relação a linha política adotada.  
