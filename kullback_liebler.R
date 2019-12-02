@@ -3,7 +3,7 @@
 # 
 # Autor: gustavovital@id.uff.br
 
-require(tidyverse)
+library(tidyverse)
 
 #### BASES DE DADOS NECESSÁRIAS ####
 
