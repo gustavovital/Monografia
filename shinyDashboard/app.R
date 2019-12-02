@@ -10,81 +10,71 @@
 
 # pacotes necessários ====
 
-library(shiny)
-library(shinydashboard)
-library(wordcloud)
-library(ggplot2)
+require(shiny)
+require(shinydashboard)
+require(wordcloud)
+require(ggplot2)
 
 # Bases de dados ====
 
 # WINDOWS ####
 
-# nuvemgeral <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/wordsgeral.rds')
-# nuvemgoldfajn <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/wordsgoldfajn.rds')
-# nuvemtombini <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/wordstombini.rds')
-# nuvemmeirelles <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/wordsmeirelles.rds')
+# nuvemgeral <- readRDS('D:/Monografia/dashBoard/www/datas/wordsgeral.rds')
+# nuvemgoldfajn <- readRDS('D:/Monografia/dashBoard/www/datas/wordsgoldfajn.rds')
+# nuvemtombini <- readRDS('D:/Monografia/dashBoard/www/datas/wordstombini.rds')
+# nuvemmeirelles <- readRDS('D:/Monografia/dashBoard/www/datas/wordsmeirelles.rds')
 # 
-# klmeirelles <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/klmeirelles.rds')
-# kltombini <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/kltombini.rds')
-# klgoldfajn <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/klgoldfajn.rds')
+# klmeirelles <- readRDS('D:/Monografia/dashBoard/www/datas/klmeirelles.rds')
+# kltombini <- readRDS('D:/Monografia/dashBoard/www/datas/kltombini.rds')
+# klgoldfajn <- readRDS('D:/Monografia/dashBoard/www/datas/klgoldfajn.rds')
 # 
-# freqmeirelles <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_meirelles.rds')
-# freqtombini <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_tombini.rds')
-# freqgoldfajn <-
-#   readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_goldfajn.rds')
+# freqmeirelles <- readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_meirelles.rds')
+# freqtombini <- readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_tombini.rds')
+# freqgoldfajn <- readRDS('D:/Monografia/dashBoard/www/datas/analise_relativa_goldfajn.rds')
 
 # LINUX ####
 
-nuvemgeral <-
+  nuvemgeral <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordsgeral.rds'
+    'www/datas/wordsgeral.rds'
   )
 nuvemgoldfajn <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordsgoldfajn.rds'
+    'www/datas/wordsgoldfajn.rds'
   )
 nuvemtombini <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordstombini.rds'
+    'www/datas/wordstombini.rds'
   )
 nuvemmeirelles <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/wordsmeirelles.rds'
+    'www/datas/wordsmeirelles.rds'
   )
 
 klmeirelles <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/klmeirelles.rds'
+    'www/datas/klmeirelles.rds'
   )
 kltombini <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/kltombini.rds'
+    'www/datas/kltombini.rds'
   )
 klgoldfajn <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/klgoldfajn.rds'
+    'www/datas/klgoldfajn.rds'
   )
 
 freqmeirelles <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/analise_relativa_meirelles.rds'
+    'www/datas/analise_relativa_meirelles.rds'
   )
 freqtombini <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/analise_relativa_tombini.rds'
+    'www/datas/analise_relativa_tombini.rds'
   )
 freqgoldfajn <-
   readRDS(
-    '/media/ragnar/Seagate Expansion Drive/Monografia/dashBoard/www/datas/analise_relativa_goldfajn.rds'
+    'www/datas/analise_relativa_goldfajn.rds'
   )
 
 # açoes  necessárias ====
@@ -193,11 +183,17 @@ ui <-
           icon = icon("calculator")
         ),
         menuItem('VAR-FRI', tabName = 'fri', icon = icon("book")),
-        menuItem('Bibliografia', tabName = 'bib', icon = icon("book"))
+        menuItem('Bibliografia', tabName = 'bib', icon = icon("book")),
+        h5(span(' %>% ', style = 'color:white'), align = 'center'),
+        menuItem('Íntegra da Monografia', tabName = 'mono', icon = icon("book"))
       )
     ),
     dashboardBody(
       tabItems(
+        # monografia ====
+        tabItem(tabName = "mono",
+                tags$iframe(style = " height:calc(100vh - 80px);width:100%", 
+                            src = "docs/mono.pdf")), 
         # INTRODUÇÃO ====
         
         tabItem(
@@ -217,7 +213,7 @@ ui <-
                    com uma mudança na presidência do Banco Central a abordagem em relação a política monetária realmente mudaria?'
           ),
           h3(
-            'Colocando em outras palavras, podemos afirmar que durante a gestão Meirelles (governo Lula), a abordagem perante a política monetária realmente divere da abordagem quando
+            'Colocando em outras palavras, podemos afirmar que durante a gestão Meirelles (governo Lula), a abordagem perante a política monetária realmente diverge da abordagem quando
                    considerando a gestão',
             span(strong('Goldfajn'), style = 'color:green'),
             '(Governo Temer)? E o período ',
@@ -308,7 +304,7 @@ ui <-
           )
         ),
         
-        # ANALISE DE SENTIMENTOS E BANCOS CENTRAIS ====
+        # ANALISE DE CENTIMENTOS E BANCOS CENTRAIS ====
         
         tabItem(
           tabName = 'analisebc',
@@ -590,7 +586,7 @@ ui <-
               withMathJax(),
               h2(
                 span(
-                  '$$\\begin{bmatrix} y_{1t} \\\\  y_{2t} \\end{bmatrix}= \\begin{bmatrix}\\delta_1 \\\\ \\delta_2 \\\\ \\end{bmatrix} + \\begin{bmatrix} \\delta_1 \\\\ \\delta_2 \\\\ \\end{bmatrix}
+                  '$$\\begin{bmatrix} y_{1t} \\\\  y_{2t} \\end{bmatrix}= \\begin{bmatrix} \\delta_1 \\\\ \\delta_2 \\\\ \\end{bmatrix}
                            + \\begin{bmatrix} \\phi_{11} & \\phi_{21} \\\\ \\phi_{12} & \\phi_{22} \\\\ \\end{bmatrix} \\begin{bmatrix}  y_{1,t-1} \\\\ y_{2,t-1} \\\\ \\end{bmatrix} + \\begin{bmatrix} u_{1t} \\\\ u_{2t} \\\\
                            \\end{bmatrix}$$',
                   style = 'color:green'
@@ -942,3 +938,5 @@ server <-
 
 shinyApp(ui, server)
 
+# deployApp() ====
+# rsconnect::deployApp('Monografia')
