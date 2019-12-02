@@ -11,9 +11,9 @@
 
 ############# Pacotes Necessários  ###############
 
-require(rprojroot)
-require(rvest)
-require(tidyverse)
+library(rprojroot)
+library(rvest)
+library(tidyverse)
 
 ############### Definindo Diretório ##############
 
