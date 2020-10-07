@@ -229,7 +229,6 @@ ggplot(df, aes(x = datas)) +
 
 rm(list = ls())
 
-
 #### IMPULSO RESPOSTA ####
 
 irf <- data.frame(x = 1:13, readRDS('Datas/impulsoresposta.rds'))
