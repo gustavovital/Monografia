@@ -50,7 +50,7 @@ dicionario <- tibble(
 )
 
 analise_economica <- c()
-for (i in 1:nrow(data_tibble)) {
+for (i in 1:nrow(data_tibble)){
   analise_economica <- str_c(analise_economica,
                              data_tibble[i, 3], collapse = ' ')
 }
