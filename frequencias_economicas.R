@@ -46,8 +46,6 @@ for (i in 1:nrow(matriz.de.frequencias)) {
 
 rownames(matriz.de.frequencias) <- nomes
 
-#### hahaha ####
-
 palavras <- list()
 
 for (i in 1:length(names)) {
