@@ -7,12 +7,12 @@
 
 ############# Pacotes Necessários  ############### 
 
-require(pdftools)
-require(rprojroot)
-require(tidyverse)
-require(readr)
-require(tm)
-require(tidytext)
+library(pdftools)
+library(rprojroot)
+library(tidyverse)
+library(readr)
+library(tm)
+library(tidytext)
 
 ############### Definindo Diretório ##############
 
