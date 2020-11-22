@@ -191,12 +191,12 @@ rm(list = ls())
 
 df <- readRDS('Datas/analise_economica.rds')
 
-goldfajn <-
-  readRDS('D:/Monografia/Datas/tibble.goldfajn.rds')[1:200,]
+# goldfajn <-
+#   readRDS('D:/Monografia/Datas/tibble.goldfajn.rds')[1:200,]
 
-word.geral <- df[1:200,]
-saveRDS(goldfajn,
-        'D:/Monografia/dashBoard/www/datas/wordsgoldfajn.rds')
+# word.geral <- df[1:200,]
+# saveRDS(goldfajn,
+#         'D:/Monografia/dashBoard/www/datas/wordsgoldfajn.rds')
 
 wordcloud(
   words = df$word,
