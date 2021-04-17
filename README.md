@@ -52,7 +52,7 @@ Os códigos de análises gráficas, no entanto, não seguem essa logíca, visto 
 |var.R|21 de outubro de 2019|21 de outubro de 2019|
 |shinyDashboard.R|15 de novembro de 2019|15 de novembro de 2019|
 
-
+#### Em breve os códigos serão enviados para um outro repositório - NLP
 
 
 
